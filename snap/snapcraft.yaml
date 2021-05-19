@@ -1,0 +1,31 @@
+name: mesa-core20
+base: core20
+adopt-info: mesa
+summary: mesa libraries for core20 snaps
+description: |
+  A content snap containing the mesa libraries and drivers for core 20
+
+grade: devel # must be 'stable' to release into candidate/stable channels
+confinement: strict
+
+parts:
+  mesa:
+    plugin: nil
+    override-pull:
+      snapcraftctl set-version `LANG=C apt-cache policy libgl1-mesa-dri | sed -rne 's/^\s+Candidate:\s+([^-]*)-.+$/\1/p'`
+    stage-packages:
+      - libgl1-mesa-dri
+    prime:
+      - -lib/udev
+      - -usr/share
+
+slots:
+  egl-libs-core20:
+    interface: content
+    read: 
+      - $SNAP/usr/lib/${SNAPCRAFT_ARCH_TRIPLET}
+
+  egl-dri-core20:
+    interface: content
+    read: 
+      - $SNAP/usr/lib/${SNAPCRAFT_ARCH_TRIPLET}/dri
