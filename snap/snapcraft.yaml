@@ -5,7 +5,7 @@ summary: mesa libraries for core20 snaps
 description: |
   A content snap containing the mesa libraries and drivers for core 20
 
-grade: devel # must be 'stable' to release into candidate/stable channels
+grade: stable
 confinement: strict
 
 architectures:
