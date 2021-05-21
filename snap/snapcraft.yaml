@@ -32,7 +32,7 @@ parts:
       - egl/dri
 
 slots:
-  egl-core20:
+  graphics-core20:
     interface: content
     read:
       - egl
