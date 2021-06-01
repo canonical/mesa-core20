@@ -22,6 +22,7 @@ parts:
       snapcraftctl set-version `LANG=C apt-cache policy libgl1-mesa-dri | sed -rne 's/^\s+Candidate:\s+([^-]*)-.+$/\1/p'`
     stage-packages:
       - libgl1-mesa-dri
+      - va-driver-all
     override-build: |
       snapcraftctl build
       mkdir -p $SNAPCRAFT_PART_INSTALL/egl/lib
