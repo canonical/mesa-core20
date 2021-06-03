@@ -23,11 +23,9 @@ parts:
     stage-packages:
       - libgl1-mesa-dri
       - va-driver-all
-    override-build: |
-      snapcraftctl build
-      mkdir -p $SNAPCRAFT_PART_INSTALL/egl/lib
-      mv $SNAPCRAFT_PART_INSTALL/usr/lib/${SNAPCRAFT_ARCH_TRIPLET}/dri $SNAPCRAFT_PART_INSTALL/egl
-      mv $SNAPCRAFT_PART_INSTALL/usr/lib/${SNAPCRAFT_ARCH_TRIPLET}/* $SNAPCRAFT_PART_INSTALL/egl/lib
+    organize:
+      'usr/lib/${SNAPCRAFT_ARCH_TRIPLET}/dri/*': egl/dri/
+      'usr/lib/${SNAPCRAFT_ARCH_TRIPLET}/*.so*': egl/lib/
     prime:
       - egl/lib
       - egl/dri
