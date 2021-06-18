@@ -4,6 +4,7 @@ adopt-info: mesa
 summary: mesa libraries for core20 snaps
 description: |
   A content snap containing the mesa libraries and drivers for core 20
+compression: lzo
 
 grade: stable
 confinement: strict
