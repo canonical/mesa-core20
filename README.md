@@ -8,3 +8,8 @@ This supplies the graphics-core20 content interface:
     .../drv contains the mesa drivers (set LIBGL_DRIVERS_PATH/LIBVA_DRIVERS_PATH to this)
     .../etc/mir-quirks contains any Mir configuration for driver support (none for mesa)
 
+----
+
+For details of the graphics-core20 content interface see:
+
+https://discourse.ubuntu.com/t/the-graphics-core20-snap-interface/23000
