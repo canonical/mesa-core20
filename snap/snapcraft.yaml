@@ -28,9 +28,11 @@ parts:
     organize:
       'usr/lib/${SNAPCRAFT_ARCH_TRIPLET}/dri/*': egl/dri/
       'usr/lib/${SNAPCRAFT_ARCH_TRIPLET}/*.so*': egl/lib/
+      'usr/share/glvnd': egl/glvnd/
     prime:
       - egl/lib
       - egl/dri
+      - egl/glvnd
 
 slots:
   graphics-core20:

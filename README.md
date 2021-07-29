@@ -6,6 +6,7 @@ This supplies the graphics-core20 content interface:
 
     .../lib contains the mesa shared libraries (add to LD_LIBRARY_PATH)
     .../drv contains the mesa drivers (set LIBGL_DRIVERS_PATH/LIBVA_DRIVERS_PATH to this)
+    .../glvnd/egl_vendor.d contains the mesa ICD (set __EGL_VENDOR_LIBRARY_DIRS to this)
     .../etc/mir-quirks contains any Mir configuration for driver support (none for mesa)
 
 ----
