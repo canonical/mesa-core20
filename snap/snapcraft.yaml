@@ -30,11 +30,13 @@ parts:
       'usr/lib/${SNAPCRAFT_ARCH_TRIPLET}/*.so*': egl/lib/
       'usr/share/glvnd': egl/glvnd/
       'usr/share/libdrm': egl/libdrm/
+      'usr/share/drirc.d/': egl/drirc.d/
     prime:
       - egl/lib
       - egl/dri
       - egl/glvnd
       - egl/libdrm
+      - egl/drirc.d
 
 slots:
   graphics-core20:
