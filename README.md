@@ -9,6 +9,7 @@ This supplies the graphics-core20 content interface:
     .../glvnd/egl_vendor.d contains the mesa ICD (set __EGL_VENDOR_LIBRARY_DIRS to this)
     .../etc/mir-quirks contains any Mir configuration for driver support (none for mesa)
     .../libdrm contains mesa configuration for driver support (layout to /usr/share/libdrm) 
+    .../drirc.d contains mesa app-specific workarounds (layout to /usr/share/drirc.d) 
 
 ----
 
