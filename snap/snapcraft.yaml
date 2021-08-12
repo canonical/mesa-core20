@@ -25,6 +25,7 @@ parts:
       - libgl1-mesa-dri
       - va-driver-all
       - libegl1
+      - libgles2
     organize:
       'usr/lib/${SNAPCRAFT_ARCH_TRIPLET}/dri/*': egl/dri/
       'usr/lib/${SNAPCRAFT_ARCH_TRIPLET}/*.so*': egl/lib/
