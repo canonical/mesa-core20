@@ -1,0 +1,2 @@
+# Mir's gbm-kms support isn't (yet) working with Nvidia
+driver-quirks=skip:driver:nvidia

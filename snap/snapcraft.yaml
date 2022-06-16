@@ -40,6 +40,12 @@ parts:
       - egl/libdrm
       - egl/drirc.d
 
+  quirks:
+    plugin: dump
+    source: quirks
+    organize:
+      'etc/': egl/etc/
+
 slots:
   graphics-core20:
     interface: content
